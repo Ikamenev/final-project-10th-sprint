@@ -6,7 +6,7 @@
 #   dir2
 #   dir3
 #   dir4
-mkdir -p task/task task/dir1 task/dir2 task/dir3 task/dir4
+mkdir -p  task/dir1 task/dir2 task/dir3/dir4
 
 # изменяем текущую директорию на task
 cd task
@@ -31,7 +31,7 @@ cp -r -p dir2/ dir3/dir4
 
 # записываем в task/dir1/summary.txt список файлов с расширением *.txt
 # находящихся в task, включая поддиректории
-find .. -iname "*.txt" > dir1/summary.txt
+find . -iname "*.txt" > dir1/summary.txt
 
 # дописываем в task/dir1/summary.txt содержимое task/dir2/list.txt
 cat dir2/list.txt >> dir1/summary.txt
